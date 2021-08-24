@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "prestart": "cd splendor",
+    "start": "npm run start --prefix splendor",
+    "prebuild": "cd splendor",
+    "build": "npm run build --prefix splendor"
+  }
+}
