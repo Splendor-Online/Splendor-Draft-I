@@ -1,0 +1,25 @@
+.player-board {
+    width: 100%;
+    height: 140px;
+
+    margin-top: 16px;
+    padding-top: 32px;
+
+    position: relative;
+
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+
+.player-board--nickname {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+.player-board--prestige-points {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}

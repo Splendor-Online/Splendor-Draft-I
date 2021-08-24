@@ -1,4 +1,5 @@
 import "./style.css";
+import PlayerBoards from "../PlayerBoards";
 
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
     <>
       <aside id="player_boards" className="side-bar left">
         {/*  */}
-        player board
+        <PlayerBoards />
       </aside>
       <main id="main_board" className="main-board">
         {/*  */}
