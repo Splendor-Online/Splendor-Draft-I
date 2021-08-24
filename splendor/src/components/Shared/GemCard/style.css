@@ -1,0 +1,30 @@
+.gem-card--container {
+    width: 1em;
+    height: 1.25em;
+
+    /*
+    background-size: 1000% 300%;
+    background-image: url('../../../asset/numbers_sheet.png');
+    */
+
+    border-radius: 25%;
+    border: 2px solid #000;
+
+    position: relative;
+
+    font-size: 1em;
+}
+
+.gem-card--inner {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 1em;
+}
