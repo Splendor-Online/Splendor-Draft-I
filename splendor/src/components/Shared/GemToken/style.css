@@ -1,0 +1,23 @@
+.token--container {
+    width: 1em;
+    height: 1em;
+
+    border-radius: 50%;
+
+    position: relative;
+
+    font-size: 1em;
+}
+
+
+.token--sprite {
+    width: 0.84em;
+    height: 0.84em;
+
+    position: absolute;
+    top: 0.08em;
+    left: 0.08em;
+
+    background-size: 600% 100%;
+    background-image: url('../../../asset/tokens.png');
+}
