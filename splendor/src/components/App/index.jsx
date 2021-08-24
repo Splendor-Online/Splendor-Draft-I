@@ -1,5 +1,6 @@
 import "./style.css";
 import PlayerBoards from "../PlayerBoards";
+import Logs from "../Logs";
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
       </main>
       <aside id="logs" className="side-bar right">
         {/*  */}
-        logs
+        <Logs />
       </aside>
     </>
   );
