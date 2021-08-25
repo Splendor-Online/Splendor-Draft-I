@@ -1,16 +1,11 @@
-const SCHEME = 'http://'
-const HOST = 'localhost:5000';
+const HOST = 'http://localhost:5000';
 
 
-function get_user_nickname(user_id) {
-    // Bring user data from server.
-    const scheme = SCHEME;
-    const host = HOST;
-    const path = `/user_data/${user_id}`;
-
-    return fetch(scheme+host+path)
-      .then(res => res.json())
+function get_user_data(user_name) {
+  // Bring user data from server.
+  return fetch(`${HOST}/user/${user_name}`, { method: 'GET' })
+    .then(res => res.json())
 }
 
 
-export default get_user_nickname;
+export default get_user_data;

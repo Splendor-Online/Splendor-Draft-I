@@ -1,45 +1,29 @@
 import React from "react";
 
-import get_user_nickname from "../../../api/splendor";
 import Number from "../../Shared/Number";
+import GemCard from "../../Shared/GemCard";
 import GemToken from "../../Shared/GemToken";
 import "./style.css";
-import GemCard from "../../Shared/GemCard";
+
+import get_user_data from "../../../api/splendor";
 
 class PlayerBoard extends React.Component {
   constructor(props) {
     super(props);
 
-    if (!props.user_id) {
-      console.error("[user_id] is required to show PlayerBoard.");
-      return;
-    }
+    const { user_name } = this.props;
 
     // TODO: Make splendor game model on back end first,
     // then continue implementing front end
     this.state = {
       user: {
-        id: props.user_id,
-        nickname: "loading...",
-        hand: {
-          gem_tokens: {
-            diamond: 0,
-            sapphire: 0,
-            emerald: 0,
-            ruby: 0,
-            onyx: 0,
-            gold: 0,
-          },
-          reserved_cards: [],
-          bought_cards: [],
-          noble_tiles: [],
-        },
+        user_name: `${user_name} (loading...)`,
+        user_is_logged_in: false,
+        user_in_game: false
       },
     };
 
-    get_user_nickname(this.props.user_id).then((res) =>
-      this.setState({ user: res })
-    );
+    get_user_data(user_name).then((res) => this.setState({ user: res }));
 
     this.count_prestige_point = this.count_prestige_point.bind(this);
   }
@@ -52,7 +36,7 @@ class PlayerBoard extends React.Component {
   render() {
     return (
       <li className="player-board">
-        <div className="player-board--nickname">{this.state.user.nickname}</div>
+        <div className="player-board--nickname">{this.state.user.user_name}</div>
         <div className="player-board--prestige-points">
           {this.count_prestige_point()} PP
         </div>

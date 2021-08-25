@@ -6,9 +6,9 @@ function PlayerBoards() {
   return (
     <ul className={['player-boards']}>
       Player Boards
-      <PlayerBoard user_id="0" />
-      <PlayerBoard user_id="7" />
-      <PlayerBoard user_id="3" />
+      <PlayerBoard user_name="Hepheir" />
+      <PlayerBoard user_name="isuke12" />
+      <PlayerBoard user_name="koreair" />
       {/* <PlayerBoard user_id="2" /> */}
     </ul>
   );
