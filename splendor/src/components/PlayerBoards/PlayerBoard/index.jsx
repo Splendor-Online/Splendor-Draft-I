@@ -17,28 +17,36 @@ class PlayerBoard extends React.Component {
     // then continue implementing front end
     this.state = {
       user: {
-        user_name: `${user_name} (loading...)`,
+        user_name: user_name,
         user_is_logged_in: false,
         user_in_game: false
       },
+      loaded: false,
     };
 
-    get_user_data(user_name).then((res) => this.setState({ user: res }));
-
-    this.count_prestige_point = this.count_prestige_point.bind(this);
+    this.update_board = this.update_board.bind(this);
   }
 
-  count_prestige_point() {
-    // TODO
-    return 0;
+
+  update_board() {
+    get_user_data(this.state.user.user_name)
+      .then((user_data) => this.setState({user: user_data, loaded: true}))
+      .catch((reason) => { console.log(reason) });
   }
 
   render() {
+    if (!this.state.loaded) {
+      this.update_board();
+    }
+
     return (
       <li className="player-board">
-        <div className="player-board--nickname">{this.state.user.user_name}</div>
+        <div className="player-board--nickname">
+          {this.state.user.user_name}
+          {this.state.loaded ? null : ' (...loading)'}
+        </div>
         <div className="player-board--prestige-points">
-          {this.count_prestige_point()} PP
+          0 PP
         </div>
         <div className="player-board--hand">
           <div className="player-board--gems">
