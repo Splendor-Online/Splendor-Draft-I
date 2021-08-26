@@ -1,6 +1,5 @@
 import React from "react";
 
-import Number from "../../Shared/Number";
 import GemCard from "../../Shared/GemCard";
 import GemToken from "../../Shared/GemToken";
 import "./style.css";
