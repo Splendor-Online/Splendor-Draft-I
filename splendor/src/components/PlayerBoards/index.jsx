@@ -9,7 +9,7 @@ function PlayerBoards() {
       <PlayerBoard user_name="Hepheir" />
       <PlayerBoard user_name="isuke12" />
       <PlayerBoard user_name="koreair" />
-      {/* <PlayerBoard user_id="2" /> */}
+      <PlayerBoard user_name="Nangman" />
     </ul>
   );
 }
