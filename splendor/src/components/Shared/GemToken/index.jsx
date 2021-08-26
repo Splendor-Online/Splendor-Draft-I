@@ -1,5 +1,6 @@
 import React from "react";
 
+import Number from "../Number";
 import "./style.css";
 
 class GemToken extends React.Component {
@@ -7,7 +8,8 @@ class GemToken extends React.Component {
     super(props);
 
     this.state = {
-      type: this.props.type
+      type: this.props.type,
+      count: this.props.count,
     };
   }
 
@@ -41,6 +43,7 @@ class GemToken extends React.Component {
     return (
       <div className="token--container">
         <div className="token--sprite" style={style_bgpos}></div>
+        {this.state.count ? <Number value={this.state.count} /> : null}
         {this.props.children}
       </div>
     );

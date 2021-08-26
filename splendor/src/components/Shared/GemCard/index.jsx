@@ -1,5 +1,6 @@
 import React from "react";
 
+import Number from "../Number";
 import "./style.css";
 
 class GemCard extends React.Component {
@@ -7,7 +8,8 @@ class GemCard extends React.Component {
     super(props);
 
     this.state = {
-      type: this.props.type
+      type: this.props.type,
+      count: this.props.count,
     };
   }
 
@@ -44,6 +46,7 @@ class GemCard extends React.Component {
     return (
       <div className="gem-card--container" style={style}>
         <div className="gem-card--inner">
+          {this.state.count ? <Number value={this.state.count}/> : null}
           {this.props.children}
         </div>
       </div>

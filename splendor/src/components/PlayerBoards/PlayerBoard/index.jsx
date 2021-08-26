@@ -43,50 +43,28 @@ class PlayerBoard extends React.Component {
         <div className="player-board--hand">
           <div className="player-board--gems">
             <div className="player-board--gem">
-              <GemCard type="diamond">
-                <Number value={1} />
-              </GemCard>
-              <GemToken type="diamond">
-                <Number value={1} />
-              </GemToken>
+              <GemCard type="diamond" count={1} />
+              <GemToken type="diamond" count={1} />
             </div>
             <div className="player-board--gem">
-              <GemCard type="sapphire">
-                <Number value={1} />
-              </GemCard>
-              <GemToken type="sapphire">
-                <Number value={0} />
-              </GemToken>
+              <GemCard type="sapphire" count={1}/>
+              <GemToken type="sapphire" count={0}/>
             </div>
             <div className="player-board--gem">
-              <GemCard type="emerald">
-                <Number value={0} />
-              </GemCard>
-              <GemToken type="emerald">
-                <Number value={2} />
-              </GemToken>
+              <GemCard type="emerald" count={0}/>
+              <GemToken type="emerald" count={5}/>
             </div>
             <div className="player-board--gem">
-              <GemCard type="ruby">
-                <Number value={0} />
-              </GemCard>
-              <GemToken type="ruby">
-                <Number value={2} />
-              </GemToken>
+              <GemCard type="ruby" count={0}/>
+              <GemToken type="ruby" count={2}/>
             </div>
             <div className="player-board--gem">
-              <GemCard type="onyx">
-                <Number value={4} />
-              </GemCard>
-              <GemToken type="onyx">
-                <Number value={3} />
-              </GemToken>
+              <GemCard type="onyx" count={4}/>
+              <GemToken type="onyx" count={3}/>
             </div>
             <div className="player-board--gem">
               <GemCard type="none"/>
-              <GemToken type="gold">
-                <Number value={2} />
-              </GemToken>
+              <GemToken type="gold" count={2}/>
             </div>
           </div>
           <div className="player-board--noble-tiles"></div>
