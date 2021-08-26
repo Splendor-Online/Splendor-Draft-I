@@ -6,4 +6,10 @@
   padding: 16px;
 
   list-style: none;
+
+  overflow-y: scroll;
+}
+
+.player-boards::-webkit-scrollbar {
+  display: none;
 }
